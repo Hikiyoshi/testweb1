@@ -1,0 +1,638 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 23, 2021, 9:25:49 PM
+    Author     : Administrator
+*/
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+
+
+#wrapper{
+    width: 100%;
+    height: 1100px;
+    margin: 0px auto;
+    border: black solid 1px;
+    border-top: none;
+}
+
+#header {
+    width: 100%;
+    min-height: 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+}
+
+#qc{
+    height: 23%;
+}
+
+#menu {
+    height: 4%;
+}
+
+#body{
+    height: 58%;
+}
+
+#footer{
+    height: 15.2%;
+    background: black;
+}
+
+
+/*menu*/
+#menu ul{
+    background: linear-gradient(deepskyblue,cyan);
+    margin: 0px auto;
+    height: 100%;
+}
+#menu li{
+    display: inline-block;
+    margin: 7px auto;
+    font-size: 18px;
+    padding: 5px 10px;
+    color: black;
+}
+#menu li:hover{
+    background: red;
+    color: white;
+}
+#menu a{
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.timkiem{
+    border: black solid 1px;
+    width: 40%;
+    font-size: 20px;
+    margin-left: 180px;
+    border-radius: 5px;
+}
+.timkiem input[type=search]{
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    width: 94%;
+}
+.timkiem i{
+    cursor: pointer;
+}
+.timkiem i:hover{
+    opacity: 0.5;
+}
+
+
+/*body*/
+#left{
+    width: 10%;
+    float: left;
+    height: 100%;
+    background: linear-gradient(to top,deepskyblue,cyan);
+}
+#content{
+    height: 94%;
+    width: 90%;
+    float: left;
+    border: rgba(0,0,0,0.5) solid 1px;
+    border-right: none;
+}
+#Sotrang{
+    height: 6%;
+    width: 90%;
+    text-align: center;
+    float: left;
+    border-left: rgba(0,0,0,0.5) solid 1px;
+}
+
+
+
+/*left*/
+#menuleft{
+    margin-top: 140px;
+    text-align: center;
+}
+#menuleft li{
+    word-wrap: break-word;
+    margin-left: 0px;
+    display: block;
+}
+#menuleft ul{
+    padding-left: 0px;
+}
+#menuleft a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+#menuleft li:hover{
+    color: red;
+    background: white;
+}
+
+#loctheogia{
+    margin-top: 50px;
+}
+#loctheogia input[type=text]{
+    width: 100%;
+    margin-top: 2px;
+    font-size: 15px;
+}
+#loctheogia div{
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+#loctheogia div:hover{
+    background: red;
+    color: white;
+}
+
+
+/*content*/
+#content1{
+    height: 100%;
+    width: 90%;
+    margin: 0px auto;
+}
+.SP{
+    width: 20%;
+    height: 46%;
+    border: black solid 1px;
+    margin: 10px 25px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+}
+.SP img{
+    margin-top: 10px;
+    width: 100%;
+    height: 75%;
+    transition: 0.5s;
+}
+.SP div{
+    margin-top: 5px;
+}
+.SP:hover{
+    box-shadow: 0px 2px 14px rgba(0,0,0,0.4);
+}
+.SP:hover div{
+    transform: scale(1.1,1.1);
+}
+.SP:hover img{
+    transform: translateY(-9px);
+}
+
+
+
+/*Sotrang*/
+#Sotrang input[type=button]{
+    font-size: 18px;
+    margin: 6px 5px;
+    border-radius: 5px;
+    border: black solid 1px;
+    background: white;
+}
+#Sotrang input[type=button]:hover{
+    background: black;
+    color: white;
+}
+
+
+
+
+/*header*/
+.nutdangnhap{
+    float: right;
+    font-size: 180%;
+    margin: 8px auto;
+    margin-right: 15px;
+}
+#nutGH{
+    margin-right: 2%;
+}
+#tenuser{
+    font-size: 120%;
+    width: 5%;
+    height: 50%;
+    float: right;
+    margin-right: 1%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+/*login*/
+#nen{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.308);
+    z-index: 4;
+}
+#giaodien{
+    width: 25%;
+    top: 20%;
+    left: 35%;
+    background: white;
+    position: fixed;
+    z-index: 5;
+    text-align: center;
+    border-radius: 5px;
+    animation: 1s a;
+}
+@keyframes a{
+    from{
+        transform: translateY(-100%);
+        opacity: 0.2;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.icon{
+    margin: 4px;
+    font-size: 25px;
+}
+
+.btn_close{
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    font-size: 20px;
+    color: red;
+}
+
+#giaodien p{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.in{
+    text-align: center;
+    margin-bottom: 8px;
+}
+.dangnhap{
+    margin: 8px 0px;
+}
+
+
+/*CTSP*/
+#CTSP{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+#BangTTSP{
+    width: 100%;
+    height: 60%;
+}
+
+#TTSP{
+    width: 50%;
+    height: 100%;
+    float: left;
+    border: black solid 1px;
+    background: white;
+    border-radius: 5px;
+}
+
+.Che{
+    width: 100%;
+    height: 20%;
+}
+.Chedung{
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+.HinhSP{
+    width: 40%;
+    height: 80%;
+    float: left;
+    margin: 30px 20px;
+}
+.HinhSP img{
+    width: 100%;
+    height: 100%;
+}
+.ttsp{
+    float: right;
+    width: 50%;
+    height: 100%;
+}
+.ttsp p{
+    font-size: 20px;
+}
+
+
+#order{
+    display: block;
+}
+
+
+
+
+/*GioHang*/
+#layerGH{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    animation: 1s a;
+}
+#gdGH{
+    width: 70%;
+    max-height: 60%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background: white;
+    border: black solid 1px;
+    border-radius: 5px;
+}
+
+
+#topGH{
+    display: flex;
+    background: rgba(0,30,240,250);
+    position: relative;
+}
+.tenGH{
+    font-size: 200%;
+    margin: 0px 5%;
+    color:white;
+}
+.tenGH:hover{
+    color: orangered;
+}
+
+
+#TGH{
+    display: flex;
+    justify-content: space-around;
+    font-size: 180%;
+}
+
+
+#contentGH{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    font-size: 20px;
+}
+.DSGH{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    font-size: 110%;
+    border-bottom: rgba(0,0,0,0.5) solid 1px;
+    margin-top: 30px;
+}
+.TTGH{
+    text-align: center;
+    word-wrap: break-word;
+    margin-left: 5%;
+}
+.imgTTGH{
+    height: 200px;
+    width: 100%;
+}
+.imgTTGH img{
+    width: 100%;
+    height: 100%;
+}
+.GiaSpGH{
+    margin-left: 100%;
+}
+.SLGH{
+    width: 30%;
+    margin-left: 50%;
+}
+.chinhsuaGH{
+    margin-left: 56%;
+}
+.nutxoaGH{
+    position: absolute;
+    top: 40%;
+    right: 3%;
+    font-size: 30px;
+}
+
+#bottomGH{
+    background: black;
+    color: white;
+    text-align: center;
+}
+#bottomGH div{
+    display: inline-block;
+    margin-left: 1%;
+    padding-top: 5px;
+    font-size: 140%;
+}
+#bottomGH .inthanhtoan{
+    float: right;
+    padding-top: 0px;
+}
+#bottomGH .inthanhtoan input{
+    font-size: 100%;
+}
+
+
+/*DonHang*/
+.DSHDon{
+    border-bottom: rgba(0,0,0,0.4) solid 1px;
+    margin-bottom:25px;
+    padding-top: 5px;
+}
+
+.ThongtinHD{
+    display: flex;
+}
+.ThongtinHD div{
+    width: 50%;
+    font-size: 120%;
+}
+
+.TTSPDH{
+    display: flex;
+}
+.TTSPDH div{
+    width: 50%;
+    margin-left: 1%;
+}
+
+
+
+/*qc*/
+#qc {
+    margin-top: 4%;
+}
+#qc2{
+    width: 25%;
+    height: 100%;
+    float: right;
+}
+
+
+
+/*footer*/
+.container {
+    width: 100%;
+    height: 75%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 3;
+    padding:0 5%;
+    padding-bottom: 2%;
+}
+.row {
+    color:#9fb4c0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.col-2 {
+    width: 100%;
+}
+.menu_bottom{
+    margin: 0;
+}
+
+#footer ul.menu_bottom li a{
+    color: white;
+    font-size: 120%;
+    list-style: none;
+    text-decoration: none;
+}
+#footer h3{
+    margin: 1%;
+}
+.copy_right{
+    text-align: center;
+    margin-top: 6px;
+    border-top: 1px solid #fff;
+    color: white;
+    font-size: 17px;
+    padding-top: 6px;
+}
+
+
+/*Gioithieu*/
+#qc2 h3{
+    margin-top: 1px;
+    margin-bottom: 8px;
+}
+#qc2 p{
+    margin: 8px;
+}
+#qc2 h4{
+    margin-top: 5px;
+}
+#qc2 .lienhe{
+    margin: 5px auto;
+}
+#qc2 .lienhe p{
+    margin-top: 20px;
+}
+
+
+
+/*reponsive*/
+@media (max-width:1300px){
+    .SP{
+        margin: 10px 15px;
+    }
+    .timkiem input[type=search]{
+        width: 90%;
+    }
+}
+@media (max-width:1130px){
+    .SP{
+        font-size: 12px;
+    }
+    #qc2{
+        font-size: 90%;
+    }
+}
+@media (max-width:920px){
+    .timkiem{
+        margin-left: 80px;
+    }
+    #qc2{
+        font-size: 12px;
+    }
+}
+@media (max-width:850px){
+    .SP{
+        font-size: 8px;
+    }
+    #menuleft li{
+        border-bottom: rgba(0,0,0,0.3) solid 1px;
+    }
+}
+@media (max-width:780px){
+    .timkiem{
+        margin-left: 60px;
+        width: 20%;
+        font-size: 100%;
+    }
+    .timkiem input[type=search]{
+        width: 70%;
+    }
+    .SP{
+        margin: 10px;
+    }
+    .in{
+        width: 100%;
+    }
+    #footer{
+        font-size: 12px;
+    }
+}
+@media (max-width:660px){
+    #qc2{
+        font-size: 10px;
+    }
+    
+}
+@media (max-width:525px){
+    .timkiem{
+        margin-left: 10px;
+    }
+    .SP{
+        margin: 00px;
+    }
+    #contentGH{
+        font-size: 12px;
+    }
+    #footer{
+        font-size: 10px;
+    }
+}

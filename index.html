@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>BANA SHOP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="index.css" />
+        <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/ad5663b13c.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form id="Fmain">
+            <div id="wrapper">
+            <div id="modal_login" style="display: none">
+                <div id="nen"></div>
+                <div id="giaodien">
+                    <h2>LOGIN</h2>
+                    <div class="btn_close" onclick="closelogin();"><i class="fas fa-times-circle " ></i></div>
+                    <div>
+                        <p>Username</p>
+                        <input type="text" value="" id="tk" class="in" placeholder="Enter your Username..."/>
+                        <p>Password</p>
+                        <input type="password" value="" id="mk" class="in" placeholder="Enter your Password..."/>
+                        <div><i class="fab fa-facebook icon" style="color: blue;"></i><i class="fab fa-twitter icon" style="color:dodgerblue;"></i><i class="fab fa-tumblr-square icon" style="color: darkslategray;"></i></div>
+                    </div>
+                    <div><input type="button" class="dangnhap" value="Đăng Nhập" onclick="login();"/></div>
+                    <div>Bạn đã có tài khoản chưa ? <a href="#" style="color: darkgreen; cursor: pointer; text-decoration: none" onclick="dk();">Đăng ký</a></div>
+                </div>
+            </div>
+            <div id="header">
+                <div id="dangnhap" class="nutdangnhap"><i class="far fa-user-circle" onclick="openlogin();"></i></div>
+                <div id="nutadmin" class="nutdangnhap"></div>
+                <div id="nutGH" style="display: none" class="nutdangnhap"><i onclick="showGH()" class="fas fa-shopping-cart"></i></div>
+                <div id="tenuser"></div>
+            </div>
+                <div id="qc">
+                    <img src="./img/redmi10.jpg" style="width: 75%;height: 100%"/>
+                    <div id="qc2"><img src="./img/bana.png" style="width: 100%;height: 100%"/></div>
+                </div>
+            <div id="menu">
+                <ul>
+                    <a href="./index.html"><li>Trang Chủ</li></a>
+                    <a href="#" onclick="HienthiGioithieu();"><li>Giới thiệu</li></a>
+                    <a href="#" onclick="HienthiLH();"><li>Liện hệ</li></a>
+                    <div class="timkiem" style="display: inline-block">
+                        <input type="search" value="" id="tktxt" placeholder="Nhập sản phẩm muốn tìm" />
+                        <i class="fas fa-search" onclick="timkiemsp();"></i>
+                    </div>
+                </ul>
+            </div>
+            <div id="body">
+                <div id="left">
+                    <div id="menuleft"></div>
+                    <div id="loctheogia">
+                        <input type="text" name="tkttxt" id="tkt" value="" placeholder="Giá từ ..."/>
+                        <input type="text" name="tkctxt" id="tkc" value="" placeholder="Đến"/>
+                        <div onclick="Locgiasp();"><i class="fas fa-search-dollar"></i></div>
+                    </div>
+                </div>
+                <div id="content">
+                    <div id="content1"></div>
+                </div>
+                <div id="Sotrang"></div>
+            </div>
+                <div id="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h3>CHĂM SÓC KHÁCH HÀNG</h3>
+                                <ul class="menu_bottom">
+                                    <li><a href="">Trung tâm hỗ trợ</a></li>
+                                    <li><a href="">Mail</a></li>
+                                    <li><a href="">Hướng dẫn mua hàng</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <h3>ABOUT</h3>
+                                <ul class="menu_bottom">
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Điều khoản</a></li>
+                                </ul>
+                            </div>
+                            <div class="col">
+                                <H3>THEO DÕI</H3>
+                                <ul class="menu_bottom">
+                                    <li><a href=""><i class="fab fa-facebook"></i> Facebook</a></li>
+                                    <li><a href=""><i class="fab fa-instagram"></i> Instagram</a></li>
+                                    <li><a href=""><i class="fab fa-youtube"></i> Youtube</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2 copy_right">Copyright © 2021 Bana Shop </div>
+                    </div>
+                </div>
+            <div id="CTSP" >
+                <div class="Che" onclick="TatTTSP();"></div>
+                <div id="BangTTSP">
+                    <div class="Chedung" onclick="TatTTSP();"></div>
+                    <div id="TTSP"></div>
+                    <div class="Chedung" onclick="TatTTSP();"></div>
+                </div>
+                <div class="Che" onclick="TatTTSP();"></div>
+            </div>
+            <div id="layerGH">
+                <div id="gdGH">
+                    <div id="topGH">
+                        <div class="tenGH" onclick="showGH();">Giỏ Hàng</div>
+                        <div class="tenGH" onclick="showDH();">Đơn Hàng</div>
+                        <div style="color: red;font-size: 180%;position: absolute;right: 0;top: 2px" onclick="displayGH();"><i class="fas fa-times-circle " ></i></div>
+                    </div>
+                    <div id="TGH">
+                    </div>
+                    <div id="contentGH"></div>
+                    <div id="bottomGH">
+                    </div>
+                </div>
+            </div>
+        </div>
+        </form>
+    </body>
+</html>
